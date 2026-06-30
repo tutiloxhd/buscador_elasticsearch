@@ -1,10 +1,5 @@
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Admi2465",
-    "database": "pruebas_busqueda"
-}
+import os
 
-ELASTIC_URL = "http://localhost:9200"
+ELASTIC_URL = os.getenv("ELASTIC_URL", "http://localhost:9200")
 
-INDEX = "documentos"
+INDEX_NAME = os.getenv("INDEX_NAME", "causas")
